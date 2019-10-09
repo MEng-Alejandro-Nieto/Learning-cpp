@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "C:\\Users\\aleja\\Documents\\Learning C++\\a.exe",
             "args": [],
-            "stopAtEntry": true,
+            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
