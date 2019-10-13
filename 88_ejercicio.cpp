@@ -7,11 +7,13 @@ transmitido a la funcion.
 
 #include <iostream>
 using std::cin; using std::cout; using std::endl;
+
 //DEFINIENDO VARIABLES GLOBALES
 float x,y;
 
 
-//PROTOTIPO DE FUNCION
+//                          PROTOTIPO DE FUNCION
+//-----------------------------------------------------------------------
 void pregunta();
 template <class TIPO>
 void funpot(TIPO base,TIPO exponente);
@@ -28,11 +30,12 @@ int main(){
 
 
 
-//DEFINIENDO LAS FUNCIONES
+//                      DEFINIENDO LAS FUNCIONES
+//-----------------------------------------------------------------------
 void pregunta(){
     cout<<"Ingrese la base y la potencia: ";
 }
-
+//-----------------------------------------------------------------------
 template <class TIPO>
 void funpot(TIPO base,TIPO exponente){
     int aux=base;
@@ -47,6 +50,7 @@ void funpot(TIPO base,TIPO exponente){
         cout<<base;
     }
 }
+//-----------------------------------------------------------------------
 
 
 
