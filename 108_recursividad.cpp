@@ -1,0 +1,22 @@
+#include <iostream>
+using std::cin; using std::cout; using std::endl;
+//////////////////////////////////////////////////////////////
+int factorial(int);
+//////////////////////////////////////////////////////////////
+int main(){
+	int numero;
+	cout<<"Ingrese numero para calcular el factorial: "; cin>>numero;
+	cout<<factorial(numero);
+	return 0;
+}
+//////////////////////////////////////////////////////////////
+int factorial(int numero){
+	if(numero==0){
+		numero=1;			
+	}
+	else{
+		numero=numero*factorial(numero-1);
+	}
+	return numero;
+}
+//////////////////////////////////////////////////////////////
