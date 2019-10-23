@@ -1,0 +1,34 @@
+/*
+Puntero estructuras
+*/
+
+#include <iostream>
+#include <stdlib.h>
+using std::cin;using std::cout; using std::endl;
+//////////////////////////////////////////////////////////////////////////
+struct persona{
+	char nombre[30];
+	int edad;
+} p1,*dir_p1=&p1;
+//////////////////////////////////////////////////////////////////////////
+void pregunta();
+void mostrar(persona *);
+//////////////////////////////////////////////////////////////////////////
+int main(){
+	pregunta();
+	mostrar(dir_p1);
+	return 0;
+}
+//////////////////////////////////////////////////////////////////////////
+void pregunta(){
+	cout<<"Nombre: "; cin.getline(dir_p1->nombre,30,'\n');
+	cout<<"Edad: ";	cin>>dir_p1->edad;
+}
+void mostrar(persona *dir_p1){
+	cout<<"Mi nombre es: "<<dir_p1->nombre<<endl;
+	cout<<"Mi edad es: "<<dir_p1->edad;
+}
+//////////////////////////////////////////////////////////////////////////
+
+
+
