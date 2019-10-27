@@ -76,12 +76,15 @@ void Gauss_Seidel(float **&matriz,float *&ic, float *&new_array,float *&arrayc){
         for(int i=0;i<*dir_nodos-2;i++){
             if(i==0){
                 *(arrayc+i)=*(ic+i+1)+*dir_cfl* *(ic+i);
+                cout<<*(arrayc+i)<<endl;
             }
             else if(i==*dir_nodos-3){
                 *(arrayc+i)=*(ic+i+1)+*dir_cfl* *(ic+i+2);
+                cout<<*(arrayc+i)<<endl;
             }
             else{
                 *(arrayc+i)=*(ic+i);
+                cout<<*(arrayc+i)<<endl;
             }
         }
         // Inicializando matrix auxiliar con 0
@@ -89,15 +92,16 @@ void Gauss_Seidel(float **&matriz,float *&ic, float *&new_array,float *&arrayc){
             *(new_array+i)=0;
         }
         // Aplicando Iteration de Gauss-Seidel     
-        for(int iterador=0;iterador<8;iterador++){
+        for(int iterador=0;iterador<5;iterador++){
             for(int i=0;i<*dir_nodos-2;i++){
                 float aux=0;
-                for(int j=0;j<=*dir_nodos-2;j++){
+                for(int j=0;j<*dir_nodos-2;j++){
                     if(j!=i){
                         aux=aux+*(*(matriz+i)+j)* (*(new_array+j));
                     }
                 }
             new_array[i]=(arrayc[i]-aux)/matriz[i][i];
+            cout<<*(new_array+i)<<endl;
             }
             cout<<endl;
         }
