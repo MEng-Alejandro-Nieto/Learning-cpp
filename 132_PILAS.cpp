@@ -41,12 +41,6 @@ void quitar(nodo *&apuntador,float &dato){
     apuntador=apuntador_auxiliar->siguiente;
     delete apuntador_auxiliar;
     cout<<"Se obtuvo: "<<dato<<endl;
-/*
-    int aux=apuntador->numero;
-    nodo *apuntador_auxiliar=apuntador->siguiente;
-    delete apuntador;
-    apuntador=apuntador_auxiliar;  
-*/
 }
 
 
