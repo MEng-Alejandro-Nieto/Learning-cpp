@@ -7,6 +7,7 @@ carrera, al final el programa debe mostrar los datos del atleta ganador de la ca
 #include <string>
 #include <stdlib.h>
 #include "Atleta.h"
+#include <conio.h>
 using namespace std;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 int n_atletas{0};
@@ -21,6 +22,7 @@ int main(int argc, char** argv) {
 	pregunta();	//----> se crea espacio de memoria para nuestro arreglo y se llena el arreglo con toda la informacion
 	ajustar_tiempos(atletas);//----> Se arreglan las horas, minutos y segundos de cada objeto dentro del arreglo
 	ganador(atletas);
+	getch();
 	return 0;
 }
 /////////////////////////////////////////////////////////////////////////
