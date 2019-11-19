@@ -11,7 +11,7 @@ void agregar(nodo *&,float &);
 void quitar(nodo *&,float &);
 ///////////////////////////////////////////////////////////////////
 int main(){
-    nodo *apuntador=NULL;
+    nodo* apuntador=NULL;
     int tamano=0; float dato=0;
     cout<<"Cuantos valores va a insertar en la pila: "; cin>>tamano;
     for (int i=0;i<tamano;i++){

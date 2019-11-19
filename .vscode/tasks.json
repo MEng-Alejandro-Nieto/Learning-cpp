@@ -1,23 +1,30 @@
-{
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Build C++ project",
-            "type": "shell",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "command": ".\\build.bat"
-        },
-        {
-            "label": "Build & run C++ project",
-            "type": "shell",
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "command": ".\\build.bat && .\\bin\\main.exe"
-        }
-    ]
-}
+
+// See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "type": "shell",
+                "label": "build",
+                "command": "C:\\MinGW\\bin\\g++.exe",
+                "args": [
+                    "-g",
+                    "${file}",
+                    "-o",
+                    "${fileDirname}\\a.exe"
+                ],
+                "options": {
+                    "cwd": "C:\\MinGW\\bin"
+                },
+                "problemMatcher": [
+                    "$gcc"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                }
+            }
+        ]
+    }
+    
